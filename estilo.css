@@ -1,0 +1,246 @@
+/* ============================================
+   LETHЕ — blog personal simple
+   ============================================ */
+
+:root {
+    --negro: #18171A;
+    --ciruela: #4A304F;
+    --gris: #68656B;
+    --marfil: #E8E1D5;
+    --tabaco: #765B4A;
+    --lavanda: #9B8DA3;
+    --fondo: #1a191c;
+    --borde: #3a383d;
+    --texto: #d4cfc7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.cabecera {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--borde);
+    margin-bottom: 30px;
+}
+
+.cabecera h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--marfil);
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--lavanda);
+    margin-bottom: 20px;
+}
+
+.nav {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    color: var(--gris);
+    text-decoration: none;
+    padding: 3px 6px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--marfil);
+}
+
+.sep {
+    color: var(--borde);
+    margin: 0 3px;
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.seccion:last-of-type {
+    border-bottom: none;
+}
+
+.titulo-seccion {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--marfil);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--borde);
+}
+
+/* Introducción */
+.intro {
+    text-align: center;
+}
+
+.foto-intro {
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--marfil);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    filter: sepia(0.15);
+    margin-bottom: 20px;
+}
+
+.intro p {
+    margin-bottom: 10px;
+    color: var(--texto);
+}
+
+.firma {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--lavanda);
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Posts */
+.post {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tabaco);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.post-fecha {
+    margin-right: 10px;
+}
+
+.post-texto {
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.post-tags {
+    margin-top: 5px;
+}
+
+.tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--lavanda);
+}
+
+/* Conocidos */
+.conocido {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--borde);
+    align-items: flex-start;
+}
+
+.conocido:last-child {
+    border-bottom: none;
+}
+
+.foto-conocido {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--marfil);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    filter: sepia(0.15);
+    flex-shrink: 0;
+}
+
+.info-conocido h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--marfil);
+    margin-bottom: 2px;
+}
+
+.relacion {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--tabaco);
+    margin-bottom: 6px;
+}
+
+.desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--lavanda);
+    line-height: 1.4;
+}
+
+/* Pie */
+.pie {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--borde);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gris);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .contenedor {
+        padding: 15px;
+    }
+    
+    .cabecera h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+    
+    .foto-intro {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .foto-conocido {
+        width: 50px;
+        height: 50px;
+    }
+}
